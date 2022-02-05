@@ -1,0 +1,84 @@
+#Question1
+n=0
+while n<10:
+    if n==5:
+        break
+    print(n)
+    n=n+1
+#Question2
+n=0
+while n<5:
+    print(n)
+    n=n+1
+else:
+    print(n, "is not less than 5")
+#Question3
+fruitlist=["strawberry","blueberry","blackberry","apple"]
+i=len(fruitlist)
+for A in range (0,i):
+    if fruitlist[A]=="apple":
+        print("Is apple really a fruit?")
+        break
+    print("I like",fruitlist[A])
+#Question4
+sum=0
+i=1
+
+while i<=30:
+    sum=sum+i
+    i=i+1
+    
+print("the sum is",sum)
+#Question5
+grade = 67
+if grade >= 90:
+  grade = 'A'
+elif grade >= 80:
+  grade = 'B'
+elif grade >= 70:
+  grade = 'C'
+elif grade >= 60:
+  grade = 'D'
+else:
+  grade = 'F'
+print(grade)
+#Question6
+marks = {'Andy':88, 'Amy':66, 'James':90, 'Jules':55, 'Arthur':77}
+
+# 6.1
+print(f'Student\tMarks')
+for student in marks:
+    print(f'{student}\t{marks[student]}')
+
+print()
+
+# 6.2
+mean_grades = 0
+max_grades = 0
+min_grades = 0
+for student in marks:
+    mean_grades += marks[student]
+    if marks[student] > max_grades: max_grades = marks[student]
+    if marks[student] < min_grades: min_grades = marks[student]
+
+mean_grades = mean_grades / len(marks)
+print(f'Mean\tMax\tMin')
+print(f'{mean_grades}\t{max_grades}\t{min_grades}')
+
+print()
+
+# 6.3
+print(f'Keys')
+for student in marks:
+    if('J' in student): break
+    print(f'{student}')
+
+print()
+
+# 6.4
+print(f'Keys')
+for student in marks:
+    if('J' in student): continue
+    print(f'{student}')
+
+print()
